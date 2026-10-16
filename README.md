@@ -1,68 +1,113 @@
-# English Vocab
+# 📚 English Vocab
 
-Ứng dụng flashcard học từ vựng tiếng Anh với giao diện Night Mode. Chạy trực tiếp trên trình duyệt, không cần cài đặt.
+**A simple and interactive English vocabulary learning web app.**
 
-## Cách chạy
-1. Tải project về và giải nén.
-2. Mở `index.html` bằng Chrome, Edge hoặc Firefox.
-3. Chọn **Flashcards** để học, **Quiz** để tự kiểm tra, hoặc **Kho từ vựng** để quản lý từ.
+English Vocab helps you build your vocabulary through flashcards, quizzes, and personalized word lists. Track your learning progress, organize vocabulary by topic, and keep expanding your collection whenever you want.
 
-## Tính năng
-- Giao diện Night Mode, tên **English Vocab** và logo chữ **K**.
-- Flashcards có phiên âm, nghĩa tiếng Việt, ví dụ và bản dịch ví dụ.
-- Quiz trắc nghiệm và thống kê tiến độ.
-- Thêm, sửa, xóa, tìm kiếm và lọc từ theo chủ đề/trạng thái.
-- Nhập/xuất JSON để thêm nhiều từ và sao lưu dữ liệu.
-- Có 20 từ mẫu ban đầu. Bạn có thể tiếp tục mở rộng kho từ; ứng dụng không đặt giới hạn số từ cố định trong code. Dung lượng thực tế tùy trình duyệt.
+---
 
-## Muốn thêm từ vựng thì làm thế nào?
+## ✨ Features
 
-**Cách 1 — Thêm trực tiếp trong ứng dụng**
-1. Mở ứng dụng.
-2. Chọn tab **Thêm từ**.
-3. Điền từ tiếng Anh, nghĩa tiếng Việt và các thông tin tùy chọn.
-4. Bấm **Lưu từ**.
+- 🃏 **Flashcards** — Learn English words with phonetics, Vietnamese meanings, and example sentences.
+- 🧠 **Vocabulary Quiz** — Test your knowledge and reinforce what you have learned.
+- 📊 **Learning Statistics** — Keep track of your vocabulary and quiz progress.
+- 📝 **Vocabulary Management** — Add, edit, and delete words to create your own collection.
+- 🔍 **Search & Filter** — Find words quickly and organize them by topic.
+- 📥 **Import Vocabulary** — Import multiple words from a JSON file.
+- 📤 **Export Vocabulary** — Export your vocabulary as a JSON file for backup or transfer.
+- 🌙 **Dark Mode** — Enjoy a comfortable learning experience with a dark interface.
+- 💾 **Local Storage** — Save your vocabulary and progress in your browser without requiring an account.
+- 📱 **Responsive Design** — Use the app on desktop and mobile devices.
 
-**Cách 2 — Nhập thêm một bộ từ bằng JSON**
-1. Chuẩn bị file JSON chứa các từ cần thêm.
-2. Trong ứng dụng, bấm **Nhập JSON** ở góc trên.
-3. Chọn file JSON của bạn.
-4. Xác nhận nhập. Ứng dụng sẽ gộp các từ vào kho hiện tại; dữ liệu có cùng ID sẽ được thay thế.
+## 🛠️ Built With
 
-Ví dụ định dạng JSON tối giản:
+- HTML5
+- CSS3
+- JavaScript
+- Browser Local Storage
+
+## 🚀 Getting Started
+
+### Run Locally
+
+No installation or additional dependencies are required.
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open `index.html` in your web browser.
+4. Start learning!
+
+```bash
+git clone https://github.com/icyr4zo/English-Vocab-Trainer
+```
+
+## 📖 Managing Vocabulary
+
+### Add a Word
+
+1. Open the vocabulary management section.
+2. Click **Add Word**.
+3. Enter the English word, Vietnamese meaning, and any optional information.
+4. Save the word to your collection.
+
+### Import Multiple Words
+
+You can expand your vocabulary without being limited to the default word list.
+
+1. Prepare a `.json` file containing your vocabulary.
+2. Open the vocabulary management section.
+3. Select **Import JSON** and choose your file.
+4. The app will import the words into your collection.
+
+Example JSON format:
 
 ```json
 [
   {
-    "english": "resilient",
-    "phonetic": "/rɪˈzɪliənt/",
-    "vietnamese": "kiên cường",
-    "topic": "Personality",
-    "example": "She is resilient.",
-    "exampleVi": "Cô ấy rất kiên cường."
-  },
-  {
-    "english": "curious",
-    "vietnamese": "tò mò",
-    "topic": "Personality"
+    "english": "achieve",
+    "vietnamese": "đạt được",
+    "phonetic": "/əˈtʃiːv/",
+    "topic": "General",
+    "example": "She worked hard to achieve her goals.",
+    "exampleVi": "Cô ấy đã làm việc chăm chỉ để đạt được mục tiêu."
   }
 ]
 ```
 
-Các trường bắt buộc là `english` và `vietnamese`. Những trường khác có thể bỏ qua. File JSON phải đúng cú pháp: dùng dấu ngoặc kép quanh tên trường và giá trị dạng chữ; không thêm dấu phẩy sau phần tử cuối cùng.
+The `english` and `vietnamese` fields are required. Other fields are optional.
 
-**Lưu ý:** Nút **Nhập JSON** dùng để nhập file `.json`, không phải để dán trực tiếp văn bản vào ô nhập. Nếu chỉ muốn thêm một vài từ, tab **Thêm từ** sẽ đơn giản hơn.
+**Note:** Importing a word with an existing matching ID replaces that entry. Export your vocabulary before making major changes if you want to keep a backup.
 
-## Sao lưu và chuyển dữ liệu
-- Bấm **Xuất JSON** để tải file sao lưu.
-- Trên thiết bị/trình duyệt khác, mở ứng dụng rồi bấm **Nhập JSON** và chọn file sao lưu.
-- Dữ liệu được lưu trong `localStorage` của trình duyệt hiện tại. Xóa dữ liệu trình duyệt có thể làm mất bộ từ, vì vậy hãy sao lưu định kỳ.
-- Không có giới hạn từ cố định trong ứng dụng, nhưng dung lượng lưu trữ thực tế phụ thuộc trình duyệt và thiết bị.
+### Export Vocabulary
 
-## Đưa lên GitHub Pages
-1. Tạo repository GitHub mới và tải `index.html` lên thư mục gốc.
-2. Vào **Settings → Pages**.
-3. Chọn deploy từ branch `main`, thư mục `/ (root)`, rồi lưu.
-4. Mở URL GitHub Pages mà GitHub cung cấp.
+Use the export feature to save your current vocabulary as a JSON file. You can keep it as a backup or import it into another browser.
 
-Sau khi đưa lên GitHub Pages, mỗi người dùng vẫn lưu dữ liệu riêng trong trình duyệt của họ. Bộ từ không tự đồng bộ giữa các người dùng.
+## 💾 Data & Privacy
+
+- Vocabulary and learning progress are stored locally in your browser.
+- No account is required to use the app.
+- Data is not automatically synchronized between different browsers or devices.
+- Export your vocabulary regularly if you want to keep a backup or move your data.
+
+Clearing your browser's local storage may permanently remove locally saved data.
+
+## 🗺️ Roadmap
+
+Potential improvements for future versions:
+
+- [ ] Spaced repetition for better long-term retention.
+- [ ] More quiz modes and learning options.
+- [ ] Vocabulary learning goals and daily reminders.
+- [ ] Cloud synchronization across devices.
+
+## 🤝 Contributing
+
+Suggestions, bug reports, and contributions are welcome. Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+No license has been specified yet. Add a `LICENSE` file if you want to define how others may use, modify, and distribute this project.
+
+---
+
+**Made with ❤️ for English learners.**
